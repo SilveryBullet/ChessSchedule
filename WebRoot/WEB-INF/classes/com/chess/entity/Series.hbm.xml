@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.chess.entity">
+
+	<class name="Series" table="chess_series">
+		<id name="id" type="long" column="chess_id">
+			<generator class="native" />
+		</id>
+		
+		<property name="seriesName" type="string" length="50" column="chess_series_name"/>	
+		<property name="seriesTime" type="string" length="50" column="chess_series_time"/>		
+		<property name="sponsor" type="string" length="50" column="chess_sponsor"/>
+		<property name="organizer" type="string" length="50" column="chess_organizer" />
+		<property name="description" type="string" length="100" column="chess_description" />
+		<property name="state" type="string" length="20" column="chess_state" />
+		
+	</class>
+
+</hibernate-mapping>
+

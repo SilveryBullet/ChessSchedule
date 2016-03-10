@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.chess.entity">
+
+	<class name="Match" table="chess_match">
+		<id name="id" type="long" column="chess_id">
+			<generator class="native" />
+		</id>
+		
+		<property name="matchName" type="string" length="50" column="chess_match_name"/>	
+		<property name="matchTime" type="string" length="50" column="chess_match_time"/>	
+		<property name="matchAddress" type="string" length="50" column="chess_match_address"/>		
+		<property name="playerNumber" type="long" length="8" column="chess_player_number"/>
+		<property name="roundCount" type="long" length="8" column="chess_round_count" />
+		<property name="matchTypeId" type="long" length="8" column="chess_match_type_id" />
+		<property name="seriesId" type="long" length="8" column="chess_series_id" />
+		<property name="scoreRuleId" type="long" length="8" column="chess_score_role_id" />
+		<property name="state" type="string" length="20" column="chess_state" />
+		
+	</class>
+
+</hibernate-mapping>
+

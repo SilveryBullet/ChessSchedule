@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />		<!-- 开发模式 -->
+	<constant name="struts.action.extension" value="action" />		<!-- 后缀名为.action -->
+	<constant name="struts.ui.theme" value="simple" />		<!-- 配置主题为simple -->
+
+	<package name="action" namespace="/" extends="struts-default">
+		<action name="admin_*" class="adminAction" method="{1}">
+			<result name="loginUI">/WEB-INF/jsp/AdminAction/loginUI.jsp</result>
+		</action>
+		
+		<action name="common_*" class="commonAction" method="{1}">
+			<result name="indexUI">/WEB-INF/jsp/CommonAction/index.jsp</result>
+			<result name="topUI">/WEB-INF/jsp/CommonAction/top.jsp</result>
+			<result name="leftUI">/WEB-INF/jsp/CommonAction/left.jsp</result>
+			<result name="rightUI">/WEB-INF/jsp/CommonAction/right.jsp</result>
+			<result name="bottomUI">/WEB-INF/jsp/CommonAction/bottom.jsp</result>
+		</action>
+		
+		<action name="player_*" class="playerAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/PlayerAction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/PlayerAction/savaUI.jsp</result>
+			<result name="toList" type="redirectAction">player_list</result>
+		</action>
+		
+		<action name="series_*" class="seriesAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/SeriesAction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/SeriesAction/savaUI.jsp</result>
+			<result name="toList" type="redirectAction">series_list</result>
+		</action>
+		
+		<action name="matchType_*" class="matchTypeAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/MatchTypeAction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/MatchTypeAction/savaUI.jsp</result>
+			<result name="toList" type="redirectAction">matchType_list</result>
+		</action>
+		
+		<action name="scoreRule_*" class="scoreRuleAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/ScoreRuleAction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/ScoreRuleAction/savaUI.jsp</result>
+			<result name="toList" type="redirectAction">scoreRule_list</result>
+		</action>
+		
+		<action name="match_*" class="matchAction" method="{1}">
+			<!-- <result name="list">/WEB-INF/jsp/ScoreRuleAction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/ScoreRuleAction/savaUI.jsp</result> 
+			<result name="toList" type="redirectAction">scoreRule_list</result>-->
+		</action>
+	</package>
+
+	<!-- 
+	<package name="Role" namespace="/" extends="struts-default">
+		<action name="role_*" class="role" method="{1}">
+			<result name="list">/WEB-INF/jsp/roleaction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/roleaction/saveUI.jsp</result>
+			<result name="toList" type="redirectAction">role_list</result>
+		</action>
+	</package> 
+	-->
+	
+</struts>

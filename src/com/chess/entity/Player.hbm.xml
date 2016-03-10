@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.chess.entity">
+
+	<class name="Player" table="chess_player">
+		<id name="id" type="long" column="chess_id">
+			<generator class="native" />
+		</id>
+		
+		<property name="name" type="string" length="50" column="chess_name"/>	
+		<property name="playerNO" type="string" length="20" column="chess_player_no"/>	
+		<property name="gender" type="string" length="20" column="chess_gender"/>	
+		<property name="department" type="string" length="50" column="chess_department"/>		
+		<property name="major" type="string" length="50" column="chess_major"/>
+		<property name="clazz" type="string" length="20" column="chess_clazz" />
+		<property name="phoneNumber" type="string" length="20" column="chess_phone_number" />
+		<property name="email" type="string" length="30" column="chess_email" />
+		<property name="detail" type="string" length="50" column="chess_detail" />
+		<property name="state" type="string" length="20" column="chess_state" />
+		
+	</class>
+
+</hibernate-mapping>
+

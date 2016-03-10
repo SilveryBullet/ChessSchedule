@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.chess.entity">
+
+	<class name="Round" table="chess_round">
+		<id name="id" type="long" column="chess_id">
+			<generator class="native" />
+		</id>
+		
+		<property name="tableId" type="long" length="8" column="chess_table_id"/>	
+		<property name="playerAId" type="long" length="8" column="chess_player_a_id"/>	
+		<property name="playerABigScore" type="double" length="8" column="chess_player_a_big_score"/>
+		<property name="playerBId" type="long" length="8" column="chess_player_b_id"/>	
+		<property name="playerBBigScore" type="double" length="8" column="chess_player_b_big_score"/>		
+		<property name="result" type="string" length="20" column="chess_result" />
+		<property name="matchId" type="long" length="8" column="chess_match_id"></property>
+		
+	</class>
+
+</hibernate-mapping>
+
